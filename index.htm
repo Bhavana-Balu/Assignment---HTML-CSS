@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment - HTML/ CSS</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=11; IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header id="header">
+            <div>
+                <i class="fa fa-bars hide"></i> 
+                <span class=""><span><i class="fa fa-th"></i> Contoso Electronics</span> <span>Microsoft Teams Admin Center</span></span>
+                <span style="float:right">
+                    <span>
+                        <i class="fa fa-bell-o"></i>
+                        <i class="fa fa-gear"></i>
+                        <i class="fa fa-question-circle"></i>
+                    </span>
+                    <div class="name-icon">MA</div>
+                </span>
+            </div>
+        </header>
+        <div id="content-root">
+            <div id="sidebar">
+                <div>
+                     <i class="fa fa-bars" onclick="toggleSidebar();"></i> 
+                </div>
+                <div style="background-color: mediumpurple;">
+                    <i class="fa fa-home"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div>
+                    <div  onclick="toggleTeams()">
+                        <i class="fa"><img src="teams_icon.svg" width="25px;"></i>
+                        <span>Teams<i id="arrow-teams" class="arrow"></i></span>
+                    </div>
+                    <ul id="teamsUl">
+                        <li>Manage teams</li>
+                        <li>Teams policies</li>
+                        <li>Update policies</li>
+                        <li>Team templates</li>
+                    </ul>
+                </div>
+                <div>
+                    <i class="fa fa-desktop"></i>
+                    <span>Devices<i class="arrow"></i></span>
+                </div>
+                <div>
+                    <i class="fa fa-globe"></i>
+                    <span>Locations<i class="arrow"></i></span>
+                </div>
+                <div>
+                    <i class="fa fa-users"></i>
+                    <span>Users</span>
+                </div>
+                <div>
+                    <i class="fa fa-users"></i>
+                    <span>Contacts</span>
+                </div>
+                <div>
+                    <i class="fa fa-calendar"></i>
+                    <span>Meetings<i class="arrow"></i></span>
+                </div>
+                <div>
+                    <i class="fa fa-envelope"></i>
+                    <span>Messaging policies</span>
+                </div>
+                <div>
+                    <i class="fa"><img src="teams_icon.svg" width="25px;"></i>
+                    <span>Teams apps<i class="arrow"></i></span>
+                </div>
+                <div>
+                    <i class="fa fa-phone-square"></i>
+                    <span>Voice<i class="arrow"></i></span>
+                </div>
+                <div>
+                    <i class="fa fa-shield"></i>
+                    <span>Policy packages</span>
+                </div>
+                <div>
+                    <i class="fa fa-line-chart"></i>
+                    <span>Analytics & reports<i class="arrow"></i></span>
+                </div>
+                <div>
+                    <i class="fa fa-gear"></i>
+                    <span>Org-wide settings<i class="arrow"></i></span>
+                </div>
+                <div>
+                    <i class="fa fa-tasks"></i>
+                    <span>Planning<i class="arrow"></i></span>
+                </div>
+                <div>
+                    <i class="fa fa-bell-o"></i>
+                    <span>Notifications & alerts<i class="arrow"></i></span>
+                </div>
+                <div>
+                    <i></i>
+                    <span>Storybook</span>
+                </div>
+                <div>
+                    <i class="fa fa-skype"></i>
+                    <span>Legacy portal <i class="fa fa-external-link"></i></span>
+                    
+                </div>
+                <div>
+                    <i class="fa fa-tachometer"></i>
+                    <span>Call quality dashboard <i class="fa fa-external-link"></i></span>
+                    
+                </div>
+            </div>
+            <div id="dashboard">
+                <div class="container">
+                    <div class="flex-container fc-one">
+                        <div class="flex-item fi-one">
+                            <h5>Microsoft Teams upgrade</h5>
+                            <h3>Your Teams upgrade status is available.</h3>
+                            <p>We are bringing the capabilities of Skype for Business Online into Microsoft Teams 
+                                to deliver a single hub for teamwork with built-in, fully-integrated voice and video.
+                                You can refresh your Teams upgrade status below.
+                            </p>
+                            
+                            <div class="refresh">Refresh status</div>
+                        </div>
+                        <div class="flex-item fi-two">
+                            <h5>Deployment task status</h5>
+                            <div class="status-pie">
+                                <p class="status-in"></p>
+                            </div>
+                            <br>
+                            <div class="task-status">
+                                <span>Completed </span>
+                                <span>In Progress </span><br>
+                                <span>Not started</span>
+                            </div>
+                        </div>
+                        <div class="flex-item fi-three">
+                            <h5>User search</h5>
+                            <span>
+                                <input type="text" placeholder="Search by display or username" name="search">
+                                <i class="fa fa-search"></i>
+                            </span>                                                  
+                            <p style="text-align:center;"><i class="fa fa-info-circle"></i> Recent searches will show up here.</p>
+                            <p>View users <i class="fa fa-long-arrow-right"></i></p>
+                        </div>
+                    </div>
+                    <div class="flex-container fc-two">
+                        <div class="flex-item fi-one">
+                            <h5>Activity log</h5>
+                            <p style="text-align:center;"><i class="fa fa-info-circle"></i> No activity in past 30 days</p>
+                            <p>View details <i class="fa fa-long-arrow-right"></i></p>
+                        </div>
+                        <div class="flex-item fi-two">
+                            <h5>Release notes</h5>
+                            <div style="display: flex;">
+                                <div>
+                                    <p>Version</p>
+                                    <p><i class="fa fa-android"></i> Android</p>
+                                    <p><i class="fa fa-apple"></i> IOS</p>
+                                    <p><i class="fa fa-desktop"></i> Desktop</p>
+                                    <p><i class="fa fa-apple"></i> Desktop (Mac)</p>
+                                    <p><i class="fa fa-globe"></i> Web</p>
+                                </div>
+                                <div>
+                                    <p>Release date</p>
+                                    <p>May 02, 05:06 AM</p>
+                                    <p>May 03, 05:06 AM</p>
+                                    <p>May 04, 05:06 AM</p>
+                                    <p>May 05, 05:06 AM</p>
+                                    <p>May 06, 05:06 AM</p>
+                                </div>
+                            </div>
+                            <p>View details <i class="fa fa-long-arrow-right"></i></p>
+                        </div>
+                        <div class="flex-item fi-three">
+                            <div>
+                                <h5>Teams user activity</h5>
+                                <span><strong>LAST 7 DAYS</strong></span>
+                                <span>LAST 30 DAYS</span>
+                                <span>LAST 90 DAYS</span>
+                            </div>
+                            
+                            <p>View details <i class="fa fa-long-arrow-right"></i></p>
+                        </div>
+                    </div>
+                    <div class="flex-container fc-three">
+                        <div class="flex-item fi-one">
+                            <h5>Organisation information</h5>
+                            <div style="display:flex;justify-content: space-between;">
+                                <div style="align-self: center;"><strong>Contoso</strong></div>
+                                <div>
+                                    <div>
+                                        <p>June 11, 2019</p>
+                                        <p>Organization created</p>
+                                    </div>
+                                    <br>
+                                    <div>
+                                        <p>India</p>
+                                        <p>Country or region</p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="flex-item fi-two">
+                            <h5>Learn more</h5>
+                            <div style="display: flex;">
+                                <span>
+                                    <p><i class="fa fa-newspaper-o"></i> Upgrade to Microsoft Teams</p>
+                                    <p><i class="fa fa-newspaper-o"></i> How to roll out teams</p>
+                                    <p><i class="fa fa-newspaper-o"></i> Manage Teams settings</p>
+                                    <p><i class="fa fa-newspaper-o"></i> Get Teams clients</p>
+                                </span>
+                                <span>
+                                    <p><i class="fa fa-newspaper-o"></i> Chat, teams, and channels</p>
+                                    <p><i class="fa fa-newspaper-o"></i> Known issues</p>
+                                    <p><i class="fa fa-newspaper-o"></i> Guest and rxternal access in Teams</p>
+                                    <p><i class="fa fa-newspaper-o"></i> Support remote workers using Teams</p>
+                                </span>
+                            </div>
+                            <p>Show more <i class="fa fa-long-arrow-right"></i></p>
+                        </div>
+                        <div class="flex-item fi-three">
+                            <h5>Training</h5>
+                            <p><i class="fa fa-newspaper-o"></i> Admin training for Teams</p>
+                            <p><i class="fa fa-newspaper-o"></i> Instructor led training for Teams</p>
+                            <p><i class="fa fa-newspaper-o"></i> End user training for Teams</p>
+                            <p><i class="fa fa-newspaper-o"></i> M365 Teamwork on Microsoft Learn</p>
+                           
+                            <p>Show more <i class="fa fa-long-arrow-right"></i></p>
+                        </div>
+                        
+                    </div>
+                    <div id="need-help">
+                        <a><i class="fa fa-question-circle"></i> Need help?</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
